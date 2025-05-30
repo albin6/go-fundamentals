@@ -27,6 +27,7 @@ func main() {
 	}
 
 	// switch like if-else
+	// show how the case expressions can be non-constants.
 	t := time.Now()
 	fmt.Println(t.Hour())
 	switch {
