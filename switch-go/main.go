@@ -36,4 +36,22 @@ func main() {
 	default:
 		fmt.Println("This is before noon")
 	}
+
+	// A type switch compares types instead of values.
+	// You can use this to discover the type of an interface value.
+	// In this example, the variable t will have the type corresponding to its clause.
+	whoAmI := func(i interface{}) {
+		switch j := i.(type) {
+		case bool:
+			fmt.Println("this is a boolean")
+		case int:
+			fmt.Println("this is an interger")
+		default:
+			fmt.Printf("type is unknown %T\n", j)
+		}
+	}
+
+	whoAmI(true)
+	whoAmI(1)
+	whoAmI("hello")
 }
