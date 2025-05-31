@@ -34,4 +34,22 @@ func main() {
 	}
 
 	fmt.Println("after filling =>", d)
+
+	// 2D array
+	twoDArr := [2][2]int{
+		{1, 2},
+		{4, 5},
+	}
+
+	fmt.Println(twoDArr)
+
+	sum := 0
+
+	for i := 0; i < len(twoDArr); i++ {
+		for j := 0; j < len(twoDArr[i]); j++ {
+			sum += twoDArr[i][j]
+		}
+	}
+
+	fmt.Println("sum of two d array elements", sum)
 }
