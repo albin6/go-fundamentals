@@ -24,4 +24,14 @@ func main() {
 	c := [...]int{2, 2: 2, 4: 2}
 
 	fmt.Println(c)
+
+	d := [5]int{}
+
+	fmt.Println("empty arr =>", d)
+
+	for i := range 5 {
+		d[i] = i + 1
+	}
+
+	fmt.Println("after filling =>", d)
 }
