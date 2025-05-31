@@ -45,8 +45,8 @@ func main() {
 
 	sum := 0
 
-	for i := 0; i < len(twoDArr); i++ {
-		for j := 0; j < len(twoDArr[i]); j++ {
+	for i := range len(twoDArr) {
+		for j := range len(twoDArr[i]) {
 			sum += twoDArr[i][j]
 		}
 	}
