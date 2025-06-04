@@ -6,6 +6,10 @@ func sum(a int, b int) int {
 	return a + b
 }
 
+func multipleReturn() (int, int) {
+	return 2, 4
+}
+
 func main() {
 	sum := sum(10, 20)
 
