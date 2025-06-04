@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"slices"
+)
 
 func main() {
 	fmt.Println("slices")
@@ -45,4 +48,23 @@ func main() {
 	n := x[:5]
 
 	fmt.Println("slicing till : 5 =>", n) // index 0 to 4 (5 is excluding)
+
+	t1 := []int{1, 2, 3, 4}
+	t2 := []int{1, 2, 3, 4}
+
+	if slices.Equal(t1, t2) {
+		fmt.Println("t1 == t2")
+	}
+
+	twoD := make([][]int, 3)
+
+	for i := range len(twoD) {
+		innerLen := i + 1
+		twoD[i] = make([]int, innerLen)
+		for j := range innerLen {
+			twoD[i][j] = i + j
+		}
+	}
+
+	fmt.Println("two d slice =>", twoD)
 }
