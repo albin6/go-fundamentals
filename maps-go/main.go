@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"maps"
+)
 
 func main() {
 	fmt.Println("Maps")
@@ -29,4 +32,16 @@ func main() {
 	_, prs := m["k2"]
 
 	fmt.Println("prs => ", prs)
+
+	m1 := map[string]int{"k1": 1, "k2": 2}
+
+	fmt.Println("m1 =>", m1)
+
+	m2 := map[string]int{"k1": 1, "k2": 2}
+
+	fmt.Println("m2 =>", m2)
+
+	if maps.Equal(m1, m2) {
+		fmt.Println("m1 == m2")
+	}
 }
