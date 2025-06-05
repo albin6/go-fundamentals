@@ -10,6 +10,12 @@ func multipleReturn() (int, int) {
 	return 2, 4
 }
 
+func variadic(nums ...int) {
+	for num := range nums {
+		fmt.Println(num)
+	}
+}
+
 func main() {
 	sum := sum(10, 20)
 
@@ -22,4 +28,10 @@ func main() {
 	_, y := multipleReturn()
 
 	fmt.Println(y)
+
+	fmt.Println("Variadic function example:")
+
+	arr := []int{1, 2, 3, 4, 5}
+
+	variadic(arr...)
 }
