@@ -14,4 +14,12 @@ func main() {
 	sum := sum(10, 20)
 
 	fmt.Println("Sum of 10 and 20 =>", sum)
+
+	a, b := multipleReturn()
+
+	fmt.Println(a, b)
+
+	_, y := multipleReturn()
+
+	fmt.Println(y)
 }
