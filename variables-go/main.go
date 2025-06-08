@@ -15,7 +15,7 @@ func main() {
 
 	fmt.Println(name)
 
-	const num1, num2 = 1, 2
+	const num1, num2 int = 1, 2
 
 	fmt.Println(num1 + num2)
 }
