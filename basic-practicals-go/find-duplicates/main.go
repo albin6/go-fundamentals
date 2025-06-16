@@ -4,11 +4,12 @@ import "fmt"
 
 func findDuplicates(nums []int) []int {
 	duplicates := []int{}
-	freq := make(map[string]int)
-
-	for i, num := range nums {
-		if freq[num] {
-			freq['h'] += 1
+	freq := make(map[int]int)
+	for _, num := range nums {
+		freq[num]++
+		if freq[num] == 2 {
+			// Add to duplicates only when seen the second time
+			duplicates = append(duplicates, num)
 		}
 	}
 
